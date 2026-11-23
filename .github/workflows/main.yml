@@ -52,7 +52,16 @@ jobs:
         shell: pwsh
         run: |
           python -m pip install --upgrade pip
-          python -m pip install pyinstaller cadquery pillow shapely
+          # NumPy >= 2.4 requires x86-64-v2 instructions. Older laptops may lack them.
+          # Pin the last pre-2.4 NumPy release for broader Windows x64 compatibility.
+          python -m pip install pyinstaller cadquery pillow shapely "numpy==2.3.5"
+          python -m pip check
+
+      - name: Verify NumPy compatibility pin
+        shell: pwsh
+        run: |
+          python -c "import numpy; print('NumPy version:', numpy.__version__); assert numpy.__version__ == '2.3.5', 'Unexpected NumPy version'"
+          python -c "import cadquery, numpy; print('CadQuery import OK; NumPy', numpy.__version__)"
 
       - name: Build Windows application
         shell: pwsh
@@ -86,6 +95,11 @@ jobs:
             throw "Build completed but CMS_Generator.exe was not found."
           }
           Write-Host "Built successfully: $exe"
+
+      - name: Record dependency versions
+        shell: pwsh
+        run: |
+          python -m pip freeze | Out-File -Encoding utf8 -FilePath "build_output\CMS_Generator\build_requirements.txt"
 
       - name: Upload Windows build
         uses: actions/upload-artifact@v4
