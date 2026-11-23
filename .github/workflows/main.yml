@@ -25,19 +25,19 @@ jobs:
       - name: Locate CMS Generator source
         shell: pwsh
         run: |
-          if (Test-Path "CMS_Generator_v0_12\main.py") {
-            "APP_DIR=CMS_Generator_v0_12" | Out-File -FilePath $env:GITHUB_ENV -Append
-            Write-Host "Using extracted source folder: CMS_Generator_v0_12"
+          if (Test-Path "CMS_Generator_v0_13\main.py") {
+            "APP_DIR=CMS_Generator_v0_13" | Out-File -FilePath $env:GITHUB_ENV -Append
+            Write-Host "Using extracted source folder: CMS_Generator_v0_13"
           }
-          elseif (Test-Path "CMS_Generator_v0_12.zip") {
+          elseif (Test-Path "CMS_Generator_v0_13.zip") {
             New-Item -ItemType Directory -Force -Path "_cms_source" | Out-Null
-            Expand-Archive -Path "CMS_Generator_v0_12.zip" -DestinationPath "_cms_source" -Force
-            if (Test-Path "_cms_source\CMS_Generator_v0_12\main.py") {
-              "APP_DIR=_cms_source\CMS_Generator_v0_12" | Out-File -FilePath $env:GITHUB_ENV -Append
-              Write-Host "Using source extracted from CMS_Generator_v0_12.zip"
+            Expand-Archive -Path "CMS_Generator_v0_13.zip" -DestinationPath "_cms_source" -Force
+            if (Test-Path "_cms_source\CMS_Generator_v0_13\main.py") {
+              "APP_DIR=_cms_source\CMS_Generator_v0_13" | Out-File -FilePath $env:GITHUB_ENV -Append
+              Write-Host "Using source extracted from CMS_Generator_v0_13.zip"
             }
             else {
-              throw "The ZIP was found, but CMS_Generator_v0_12/main.py was not inside it."
+              throw "The ZIP was found, but CMS_Generator_v0_13/main.py was not inside it."
             }
           }
           elseif (Test-Path "main.py") {
@@ -45,7 +45,7 @@ jobs:
             Write-Host "Using repository root as the application directory."
           }
           else {
-            throw "Could not find CMS_Generator_v0_12/main.py, CMS_Generator_v0_12.zip, or main.py at repository root."
+            throw "Could not find CMS_Generator_v0_13/main.py, CMS_Generator_v0_13.zip, or main.py at repository root."
           }
 
       - name: Install build dependencies
@@ -104,6 +104,6 @@ jobs:
       - name: Upload Windows build
         uses: actions/upload-artifact@v4
         with:
-          name: CMS_Generator_Windows_v0_12
+          name: CMS_Generator_Windows_v0_13
           path: build_output/CMS_Generator/
           if-no-files-found: error
