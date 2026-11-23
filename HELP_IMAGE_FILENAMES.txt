@@ -1,0 +1,96 @@
+CMS Generator contextual help image manifest
+===========================================
+
+Replace any placeholder PNG below using exactly the same relative path/filename.
+The GUI dynamically loads the image when the associated input is focused.
+
+beam_type                 assets/help/crossbeam/beam_family.png
+beam_sweep_mode           assets/help/crossbeam/sweep_source.png
+beam_t                    assets/help/crossbeam/thickness.png
+beam_R                    assets/help/crossbeam/sweep_radius.png
+beam_L                    assets/help/crossbeam/beam_length.png
+beam_D                    assets/help/crossbeam/depth.png
+beam_H                    assets/help/crossbeam/height.png
+steel                     assets/help/crossbeam/steel_grade.png
+beam_z                    assets/help/crossbeam/front_face_center_z.png
+beam_step                 assets/help/crossbeam/step_guideline.png
+bp_enabled                assets/help/beam_plate/use_beam_plate.png
+bp_y                      assets/help/beam_plate/outer_y.png
+bp_w                      assets/help/beam_plate/width.png
+bp_t                      assets/help/beam_plate/thickness.png
+bp_overlap                assets/help/beam_plate/beam_overlap.png
+bp_gap_outer              assets/help/beam_plate/slip_gap_outer.png
+bp_gap_inner              assets/help/beam_plate/slip_gap_inner.png
+bp_radius_basis           assets/help/beam_plate/radius_basis.png
+bp_radius_k               assets/help/beam_plate/bend_radius_input.png
+bp_radius_other           assets/help/beam_plate/bend_radius_derived.png
+cc_rw                     assets/help/crush_can/rear_width.png
+cc_rd                     assets/help/crush_can/rear_height.png
+cc_rz                     assets/help/crush_can/rear_center_z.png
+cc_fw                     assets/help/crush_can/front_width.png
+cc_fd                     assets/help/crush_can/front_height.png
+cc_fz                     assets/help/crush_can/front_center_z.png
+cc_t                      assets/help/crush_can/thickness.png
+cc_radius_basis           assets/help/crush_can/radius_basis.png
+cc_radius_k               assets/help/crush_can/bend_radius_input.png
+cc_radius_other           assets/help/crush_can/bend_radius_derived.png
+cc_rs                     assets/help/crush_can/rear_straight.png
+cc_fs                     assets/help/crush_can/front_straight.png
+cc_tr                     assets/help/crush_can/transition_radius.png
+cc_offset                 assets/help/crush_can/rear_datum_offset.png
+cc_y                      assets/help/crush_can/lh_center_y.png
+split                     assets/help/split/split_orientation.png
+larger                    assets/help/split/larger_half.png
+overlap                   assets/help/split/overlap.png
+rear_arch                 assets/help/rear_interface/architecture.png
+back_w                    assets/help/rear_interface/back_plate_width.png
+back_h                    assets/help/rear_interface/back_plate_height.png
+back_t                    assets/help/rear_interface/back_plate_thickness.png
+bolt_n                    assets/help/rear_interface/bolt_count.png
+hole_d                    assets/help/rear_interface/hole_diameter.png
+bolt_x                    assets/help/rear_interface/bolt_x_from_rear.png
+bolt_margin               assets/help/rear_interface/vertical_edge_margin.png
+front_mode                assets/help/front_interface/mode.png
+front_extra               assets/help/front_interface/extra_after_contact.png
+flow_top                  assets/help/front_interface/flow_top.png
+flow_bottom               assets/help/front_interface/flow_bottom.png
+flow_inner                assets/help/front_interface/flow_inner.png
+flow_outer                assets/help/front_interface/flow_outer.png
+bead_enabled              assets/help/beads/enable_beads.png
+bead_w                    assets/help/beads/bead_width.png
+bead_spacing              assets/help/beads/clear_spacing_x.png
+bead_rear_min             assets/help/beads/minimum_rear_remainder.png
+bead_flat_land            assets/help/beads/flat_land_z.png
+bead_sidewall_sense       assets/help/beads/sidewall_sense.png
+bead_depth_mode           assets/help/beads/depth_mode.png
+bead_default_depth        assets/help/beads/bead_depth.png
+bead_top_depth            assets/help/beads/top_depth.png
+bead_inner_depth          assets/help/beads/inner_depth.png
+bead_bottom_depth         assets/help/beads/bottom_depth.png
+bead_outer_depth          assets/help/beads/outer_depth.png
+bead_overrides            assets/help/beads/set_overrides.png
+bead_override_set         assets/help/beads/override_set_number.png
+bead_override_depth_mode  assets/help/beads/override_depth_mode.png
+bead_override_uniform_depth  assets/help/beads/override_uniform_depth.png
+bead_override_top_depth   assets/help/beads/override_top_depth.png
+bead_override_inner_depth  assets/help/beads/override_inner_depth.png
+bead_override_bottom_depth  assets/help/beads/override_bottom_depth.png
+bead_override_outer_depth  assets/help/beads/override_outer_depth.png
+bead_cut_top              assets/help/beads/cut_radius_top.png
+bead_cut_inner            assets/help/beads/cut_radius_inner.png
+bead_cut_bottom           assets/help/beads/cut_radius_bottom.png
+bead_cut_outer            assets/help/beads/cut_radius_outer.png
+ex_assy                   assets/help/export/assembly_step.png
+ex_ind                    assets/help/export/individual_steps.png
+ex_json                   assets/help/export/config_json.png
+ex_sum                    assets/help/export/build_summary.png
+ex_ts                     assets/help/export/timestamp_names.png
+PAGE: Crossbeam           assets/help/crossbeam/overview.png
+PAGE: Beam Plate          assets/help/beam_plate/overview.png
+PAGE: Crush Can           assets/help/crush_can/overview.png
+PAGE: Split               assets/help/split/overview.png
+PAGE: Rear Interface      assets/help/rear_interface/overview.png
+PAGE: Front Interface     assets/help/front_interface/overview.png
+PAGE: Beads               assets/help/beads/overview.png
+PAGE: Review              assets/help/review/overview.png
+PAGE: Export              assets/help/export/overview.png
